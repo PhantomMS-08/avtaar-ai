@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DigiAvtaar AI — Digital Literacy Indian Teenager Avatar</title>
+  <meta name="description" content="AI Avatar video featuring an Indian teenager educating youth on digital literacy, cyber safety, and smart online habits in English and Hinglish with expressive hand gestures.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Ambient background glow elements -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <!-- Top Navigation -->
+  <header class="navbar" id="top-nav">
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-orb">
+          <span class="orb-pulse"></span>
+          <span class="orb-core"></span>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">DigiAvtaar<span class="brand-accent">.AI</span></span>
+          <span class="brand-tag">Youth Cyber Literacy</span>
+        </div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#showcase" class="nav-item active">Showcase</a>
+        <a href="#scripts" class="nav-item">Dual Scripts</a>
+        <a href="#literacy-pillars" class="nav-item">Key Lessons</a>
+        <a href="#quiz" class="nav-item">Cyber Quiz</a>
+        <a href="#generator" class="nav-item studio-btn">
+          <span class="sparkle-icon">✨</span> AI Studio
+        </a>
+      </nav>
+
+      <div class="nav-meta">
+        <div class="credits-badge" id="credits-badge" title="D-ID API Account Credits">
+          <span class="credit-dot"></span>
+          <span class="credit-label">Credits:</span>
+          <strong id="credits-count" class="credit-value">4</strong>
+        </div>
+        <button class="icon-btn theme-btn" id="theme-btn" title="Toggle Mode">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>AI Avatar Video Production &bull; Upper-Body & Hand Gestures Active</span>
+      </div>
+      <h1 class="hero-title">
+        Empowering Youth with <span class="gradient-text">Digital Literacy</span>
+      </h1>
+      <p class="hero-description">
+        Watch <strong>Anita</strong>, an Indian teenager AI avatar, break down essential cyber safety tips, password hygiene, and online fraud awareness. Experience the same message in both authentic <strong>English</strong> and natural youth <strong>Hinglish</strong>!
+      </p>
+
+      <!-- Language Selector Pill Toggle -->
+      <div class="language-toggle-wrapper">
+        <div class="language-pill-container" role="tablist">
+          <button class="lang-tab active" id="tab-en" data-lang="en" role="tab" aria-selected="true">
+            <span class="lang-flag">🇬🇧</span>
+            <span class="lang-title">English Edition</span>
+            <span class="lang-subtitle">Indian Accent (Ananya Neural)</span>
+          </button>
+          <button class="lang-tab" id="tab-hinglish" data-lang="hinglish" role="tab" aria-selected="false">
+            <span class="lang-flag">🇮🇳</span>
+            <span class="lang-title">Hinglish Edition</span>
+            <span class="lang-subtitle">Colloquial Youth (Swara Neural)</span>
+          </button>
+          <div class="pill-slider" id="pill-slider"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Showcase Stage -->
+    <section class="showcase-section" id="showcase">
+      <div class="showcase-grid">
+        <!-- Main Player Column -->
+        <div class="player-column">
+          <div class="video-card glass-panel" id="video-card">
+            <!-- Video Meta Header -->
+            <div class="card-header">
+              <div class="avatar-info">
+                <div class="avatar-avatar">
+                  <img src="assets/anita_thumb.png" alt="Anita AI Avatar" class="avatar-img" id="avatar-preview-img">
+                  <span class="online-indicator"></span>
+                </div>
+                <div class="avatar-details">
+                  <h3 class="avatar-name" id="current-avatar-name">Anita — Digital Literacy Advocate</h3>
+                  <div class="avatar-tags">
+                    <span class="tag-pill">Indian Teenager</span>
+                    <span class="tag-pill accent" id="current-lang-pill">English (Indian Accent)</span>
+                    <span class="tag-pill highlight">Hand Gestures Sync</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="video-quality-tag">
+                <span class="hd-badge">1080p HD</span>
+                <span class="fps-badge">24 FPS</span>
+              </div>
+            </div>
+
+            <!-- Video Player Element with Autoplay Muted & Playsinline -->
+            <div class="video-frame-container" id="video-frame-container">
+              <video 
+                id="main-video" 
+                class="main-video-player" 
+                preload="auto" 
+                autoplay
+                muted
+                loop
+                playsinline 
+                poster="assets/anita_classroom.png">
+                <source src="videos/digital_literacy_en.mp4" type="video/mp4" id="video-source">
+                Your browser does not support HTML5 video.
+              </video>
+
+              <!-- Floating Unmute Overlay Banner -->
+              <div class="unmute-banner" id="unmute-banner">
+                <button class="unmute-action-btn" id="unmute-action-btn">
+                  <span class="unmute-icon">🔊</span>
+                  <span class="unmute-text">Tap to Unmute Audio</span>
+                </button>
+              </div>
+
+              <!-- Video Overlay Play Button -->
+              <div class="video-overlay hidden" id="video-overlay">
+                <button class="big-play-btn" id="big-play-btn" aria-label="Play Video">
+                  <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                </button>
+              </div>
+
+              <!-- Animated Speech Waveform overlay -->
+              <div class="waveform-overlay active" id="waveform-overlay">
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+              </div>
+            </div>
+
+            <!-- Custom Video Controls -->
+            <div class="custom-controls" id="custom-controls">
+              <!-- Progress Bar -->
+              <div class="progress-bar-container" id="progress-container">
+                <div class="progress-bar-bg">
+                  <div class="progress-filled" id="progress-filled"></div>
+                  <div class="progress-handle" id="progress-handle"></div>
+                </div>
+              </div>
+
+              <div class="controls-row">
+                <div class="controls-left">
+                  <button class="ctrl-btn" id="play-pause-btn" title="Play / Pause">
+                    <svg class="play-icon hidden" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    <svg class="pause-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
+                  </button>
+
+                  <button class="ctrl-btn" id="replay-btn" title="Replay from Start">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg>
+                  </button>
+
+                  <div class="volume-group">
+                    <button class="ctrl-btn" id="mute-btn" title="Mute / Unmute">
+                      <svg class="volume-icon hidden" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+                      <svg class="mute-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="1" y1="1" x2="23" y2="23"></line><path d="M9 9v3a3 3 0 0 0 5.12 2.12M15 9.34V4a3 3 0 0 0-5.94-.6"></path><path d="M17 16.95A7 7 0 0 1 5 12v-2m14 0v2a7 7 0 0 1-.11 1.23"></path></svg>
+                    </button>
+                    <input type="range" id="volume-slider" class="volume-slider" min="0" max="1" step="0.05" value="1">
+                  </div>
+
+                  <span class="time-display" id="time-display">00:00 / 00:17</span>
+                </div>
+
+                <div class="controls-right">
+                  <!-- Speed dropdown -->
+                  <div class="speed-selector">
+                    <button class="speed-btn" id="speed-btn">1.0x</button>
+                    <div class="speed-menu hidden" id="speed-menu">
+                      <button data-speed="0.75">0.75x</button>
+                      <button data-speed="1.0" class="active">1.0x Normal</button>
+                      <button data-speed="1.25">1.25x</button>
+                      <button data-speed="1.5">1.5x</button>
+                    </div>
+                  </div>
+
+                  <button class="ctrl-btn" id="theatre-btn" title="Cinema Mode">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                  </button>
+
+                  <button class="ctrl-btn" id="fullscreen-btn" title="Full Screen">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Video Actions Bar -->
+            <div class="video-actions">
+              <a href="videos/digital_literacy_en.mp4" download="Digital_Literacy_Anita_AI.mp4" class="btn btn-primary" id="download-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                Download MP4 Video
+              </a>
+              <button class="btn btn-secondary" id="copy-link-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                Copy Video Link
+              </button>
+              <button class="btn btn-ghost" id="share-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+                Share
+              </button>
+            </div>
+          </div>
+
+          <!-- Quick Thumbnails Switcher for Immediate Visibility -->
+          <div class="quick-video-cards">
+            <div class="quick-v-card active" id="quick-en-card" data-lang="en">
+              <div class="quick-v-thumb">
+                <img src="assets/anita_classroom.png" alt="English Video">
+                <span class="play-badge">▶ EN</span>
+              </div>
+              <div class="quick-v-info">
+                <h4>English Edition (Indian Accent)</h4>
+                <p>17s &bull; Ananya Neural &bull; Classroom</p>
+              </div>
+            </div>
+            <div class="quick-v-card" id="quick-hi-card" data-lang="hinglish">
+              <div class="quick-v-thumb">
+                <img src="assets/anita_classroom.png" alt="Hinglish Video">
+                <span class="play-badge">▶ HI</span>
+              </div>
+              <div class="quick-v-info">
+                <h4>Hinglish Edition (Colloquial Youth)</h4>
+                <p>19s &bull; Swara Neural &bull; Classroom</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Teleprompter & Live Script Column -->
+        <div class="script-column" id="scripts">
+          <div class="script-card glass-panel">
+            <div class="card-header border-b">
+              <div class="teleprompter-status">
+                <span class="live-dot"></span>
+                <span class="teleprompter-title">Live Teleprompter & Script</span>
+              </div>
+              <span class="lang-indicator" id="script-lang-indicator">English Script</span>
+            </div>
+
+            <!-- Active Script Viewer -->
+            <div class="script-body" id="script-body">
+              <!-- English Script block -->
+              <div class="script-content-wrapper active" id="script-en">
+                <div class="script-quote">
+                  <span class="quote-mark">“</span>
+                  <div class="script-lines">
+                    <p class="script-sentence" data-start="0" data-end="4">
+                      Hey everyone! In today's digital world, 
+                      <mark class="highlight-term">digital literacy</mark> is our real superpower.
+                    </p>
+                    <p class="script-sentence" data-start="4.5" data-end="10">
+                      Always protect your <mark class="highlight-term">passwords</mark>, 
+                      never share your <mark class="highlight-danger">OTPs</mark>, 
+                      and verify information before forwarding it.
+                    </p>
+                    <p class="script-sentence" data-start="10.5" data-end="17">
+                      Stay smart, stay secure, and let's make the internet 
+                      <mark class="highlight-safe">safer together!</mark>
+                    </p>
+                  </div>
+                </div>
+
+                <div class="script-specs">
+                  <div class="spec-item">
+                    <span class="spec-label">Avatar Voice</span>
+                    <span class="spec-val">en-IN-AnanyaNeural</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">Target Audience</span>
+                    <span class="spec-val">Students & Teenagers</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">Gestures</span>
+                    <span class="spec-val">Both Hands Open (00:05)</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Hinglish Script block -->
+              <div class="script-content-wrapper hidden" id="script-hinglish">
+                <div class="hinglish-tabs">
+                  <button class="sub-tab active" id="sub-roman-btn">Roman Script (Youth Spoken)</button>
+                  <button class="sub-tab" id="sub-dev-btn">Devanagari Hindi</button>
+                </div>
+
+                <div class="script-quote">
+                  <span class="quote-mark">“</span>
+                  <div class="script-lines" id="hinglish-roman-view">
+                    <p class="script-sentence" data-start="0" data-end="4">
+                      Hey guys! Aaj ke <mark class="highlight-term">digital era</mark> mein, 
+                      digital literacy hum sabki <mark class="highlight-term">superpower</mark> hai!
+                    </p>
+                    <p class="script-sentence" data-start="4.5" data-end="11">
+                      Apne <mark class="highlight-term">passwords</mark> aur 
+                      <mark class="highlight-danger">OTP</mark> kabhi kisi se share mat kijiye, 
+                      aur bina verify kiye koi bhi news forward mat karo.
+                    </p>
+                    <p class="script-sentence" data-start="11.5" data-end="18">
+                      Stay smart, <mark class="highlight-safe">safe raho</mark>, 
+                      aur cyber safe bano!
+                    </p>
+                  </div>
+                  
+                  <div class="script-lines hidden" id="hinglish-dev-view">
+                    <p class="script-sentence">
+                      Hey guys! आज के <mark class="highlight-term">digital era</mark> में, 
+                      digital literacy हम सबकी <mark class="highlight-term">superpower</mark> है!
+                    </p>
+                    <p class="script-sentence">
+                      अपने <mark class="highlight-term">passwords</mark> और 
+                      <mark class="highlight-danger">OTP</mark> कभी किसी से share मत कीजिए, 
+                      और बिना verify किए कोई भी news forward मत करो।
+                    </p>
+                    <p class="script-sentence">
+                      Stay smart, <mark class="highlight-safe">safe रहो</mark>, 
+                      और cyber safe बनो!
+                    </p>
+                  </div>
+                </div>
+
+                <div class="script-specs">
+                  <div class="spec-item">
+                    <span class="spec-label">Avatar Voice</span>
+                    <span class="spec-val">hi-IN-SwaraNeural</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">Style</span>
+                    <span class="spec-val">Natural Code-Switching</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">Gestures</span>
+                    <span class="spec-val">Hand Emphasis on 'OTP' & 'Safe'</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Vocabulary breakdown card -->
+            <div class="vocab-card">
+              <h4 class="vocab-title">💡 Cyber Literacy Breakdown</h4>
+              <div class="vocab-grid">
+                <div class="vocab-item">
+                  <span class="vocab-badge danger">OTP</span>
+                  <span class="vocab-desc">One-Time Password — bank & app security key. Never disclose to anyone calling!</span>
+                </div>
+                <div class="vocab-item">
+                  <span class="vocab-badge warning">Fake Forwards</span>
+                  <span class="vocab-desc">Sensational rumors. Always check verified fact-checking sources before sharing.</span>
+                </div>
+                <div class="vocab-item">
+                  <span class="vocab-badge success">Strong Passwords</span>
+                  <span class="vocab-desc">12+ characters mixing letters, symbols & numbers. Never use birthdates or names.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Digital Literacy Core Pillars -->
+    <section class="pillars-section" id="literacy-pillars">
+      <div class="section-header">
+        <span class="section-tag">Curriculum Essentials</span>
+        <h2 class="section-title">4 Pillars Covered in the Video</h2>
+        <p class="section-desc">Key takeaways conveyed by avatar Anita to empower Indian students and youth online.</p>
+      </div>
+
+      <div class="pillars-grid">
+        <div class="pillar-card glass-panel">
+          <div class="pillar-icon-box cyan">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          </div>
+          <h3 class="pillar-heading">1. Credential Security</h3>
+          <p class="pillar-text">Anita highlights strong passwords and avoiding repetitive keys across social handles, gaming platforms, and emails.</p>
+          <ul class="pillar-points">
+            <li>Passphrase method (e.g. 4 random words)</li>
+            <li>Enable 2FA (Two-Factor Authentication)</li>
+          </ul>
+        </div>
+
+        <div class="pillar-card glass-panel">
+          <div class="pillar-icon-box rose">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          </div>
+          <h3 class="pillar-heading">2. Zero-Trust OTP Defense</h3>
+          <p class="pillar-text">No legitimate company, bank, or government officer ever requests OTP over phone, WhatsApp, or SMS.</p>
+          <ul class="pillar-points">
+            <li>Treat OTP as your personal private ATM PIN</li>
+            <li>Beware of urgency tactics by scammers</li>
+          </ul>
+        </div>
+
+        <div class="pillar-card glass-panel">
+          <div class="pillar-icon-box amber">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          </div>
+          <h3 class="pillar-heading">3. Verifying Before Forwarding</h3>
+          <p class="pillar-text">Youth often fall prey to sensationalized viral posts. Pausing to verify prevents dangerous misinformation spirals.</p>
+          <ul class="pillar-points">
+            <li>Use reverse image search for viral photos</li>
+            <li>Verify with official portals before sharing</li>
+          </ul>
+        </div>
+
+        <div class="pillar-card glass-panel">
+          <div class="pillar-icon-box emerald">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
+          <h3 class="pillar-heading">4. Cyber Hygiene & Empathy</h3>
+          <p class="pillar-text">Building a respectful digital India where bullying, doxxing, and unsolicited messages are actively rejected.</p>
+          <ul class="pillar-points">
+            <li>Review privacy settings on Instagram & apps</li>
+            <li>Report suspicious accounts promptly</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Cyber Quiz -->
+    <section class="quiz-section" id="quiz">
+      <div class="quiz-card glass-panel">
+        <div class="section-header">
+          <span class="section-tag">Interactive Challenge</span>
+          <h2 class="section-title">Teen Cyber Literacy Quick Quiz</h2>
+          <p class="section-desc">Test your digital literacy awareness based on Anita's advice.</p>
+        </div>
+
+        <div class="quiz-container" id="quiz-container">
+          <div class="quiz-progress-bar">
+            <div class="quiz-fill" id="quiz-fill" style="width: 33%"></div>
+          </div>
+
+          <div class="quiz-question-box" id="question-box">
+            <span class="q-number" id="q-number">Question 1 of 3</span>
+            <h3 class="q-title" id="q-title">A gaming tournament admin on Discord requests your WhatsApp OTP to "verify your tournament entry". What should you do?</h3>
+            
+            <div class="options-list" id="options-list">
+              <button class="option-btn" data-correct="false">
+                <span class="opt-letter">A</span>
+                <span class="opt-text">Share the OTP quickly before the slot fills up.</span>
+              </button>
+              <button class="option-btn" data-correct="true">
+                <span class="opt-letter">B</span>
+                <span class="opt-text">Never share! It's a phishing attempt trying to hijack your account.</span>
+              </button>
+              <button class="option-btn" data-correct="false">
+                <span class="opt-letter">C</span>
+                <span class="opt-text">Share only the last 3 digits of the OTP.</span>
+              </button>
+            </div>
+
+            <div class="quiz-feedback hidden" id="quiz-feedback">
+              <p class="feedback-text" id="feedback-text"></p>
+              <button class="btn btn-primary" id="next-q-btn">Next Question</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Live AI Avatar Video Studio (Generator) -->
+    <section class="generator-section" id="generator">
+      <div class="generator-card glass-panel">
+        <div class="gen-header">
+          <div class="gen-title-group">
+            <span class="section-tag sparkle">D-ID Studio Engine</span>
+            <h2 class="section-title">Generate Custom AI Avatar Videos</h2>
+            <p class="section-desc">
+              Want Anita or another presenter to speak a custom cyber safety message? Write your script below and trigger live synthesis using your connected API key!
+            </p>
+          </div>
+          <div class="credits-pill">
+            <span>Remaining Credits:</span>
+            <strong id="gen-credits-count" class="text-accent">4 Credits</strong>
+          </div>
+        </div>
+
+        <div class="generator-grid">
+          <div class="gen-form">
+            <!-- Script Prompt Input -->
+            <div class="form-group">
+              <div class="form-label-row">
+                <label for="custom-script-input" class="form-label">Avatar Script / Message</label>
+                <span class="char-counter" id="char-counter">0 / 250 chars</span>
+              </div>
+              <textarea 
+                id="custom-script-input" 
+                class="form-textarea" 
+                rows="4" 
+                maxlength="250" 
+                placeholder="Type your short cyber safety tip (English or Hinglish)... e.g., 'Hello students! Always use strong passwords and never click unknown links.'"></textarea>
+            </div>
+
+            <!-- Quick Template Chips -->
+            <div class="quick-templates">
+              <span class="templates-label">Quick Ideas:</span>
+              <button class="chip-btn" data-text="Be careful with free public Wi-Fi networks! Always use a secure VPN and avoid logging into banking apps on open networks.">📶 Public Wi-Fi Alert</button>
+              <button class="chip-btn" data-text="Never click on links promising free gaming skins or gift cards! They are phishing traps designed to steal your credentials.">🎮 Gaming Scams</button>
+              <button class="chip-btn" data-text="Dosto, social media pe apni personal location aur travel plans share mat karo. Stay alert and stay safe!">📱 Hinglish Privacy</button>
+            </div>
+
+            <!-- Controls row: Language & Presenter -->
+            <div class="form-row">
+              <div class="form-group col">
+                <label for="gen-language-select" class="form-label">Language & Voice</label>
+                <select id="gen-language-select" class="form-select">
+                  <option value="en" selected>English (Indian Accent - Ananya Neural)</option>
+                  <option value="hinglish">Hinglish / Hindi (Swara Neural)</option>
+                  <option value="en-aarti">English (Aarti Neural)</option>
+                </select>
+              </div>
+
+              <div class="form-group col">
+                <label for="gen-presenter-select" class="form-label">Avatar Style (Indian Teenager)</label>
+                <select id="gen-presenter-select" class="form-select">
+                  <option value="v2_public_anita_pink_shirt_classroom@w0TKk10XrO" selected>Anita — Classroom Student (Pink Shirt + Gestures)</option>
+                  <option value="v2_public_anita@Os4oKCBIgZ">Anita — Studio Blazer (Hands Gestures)</option>
+                  <option value="v2_public_anita_pink_shirt_green_screen@pw9Otj5BPp">Anita — Studio Pink Top</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="gen-actions">
+              <button class="btn btn-primary btn-large" id="generate-video-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                Generate Video with AI
+              </button>
+              <span class="cost-note">⚡ Consumes ~1 API Credit (15 sec clip)</span>
+            </div>
+
+            <!-- Generation Status Alert -->
+            <div class="gen-status-box hidden" id="gen-status-box">
+              <div class="spinner-row">
+                <div class="spinner"></div>
+                <div class="status-texts">
+                  <span class="status-title" id="status-title">Creating Neural Video Clip...</span>
+                  <span class="status-sub" id="status-sub">Connecting to D-ID API presenter pipeline...</span>
+                </div>
+              </div>
+              <div class="progress-track">
+                <div class="progress-bar-active" id="gen-progress-bar" style="width: 15%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Live Preview Sidebox -->
+          <div class="gen-preview-column">
+            <div class="preview-box glass-panel" id="gen-preview-box">
+              <div class="preview-placeholder" id="preview-placeholder">
+                <img src="assets/anita_classroom.png" alt="Presenter Preview" class="placeholder-img">
+                <div class="placeholder-caption">
+                  <span class="badge-mini">AI Presenter</span>
+                  <p>Generated custom videos will render here with full audio and controls.</p>
+                </div>
+              </div>
+
+              <div class="custom-video-wrapper hidden" id="custom-video-wrapper">
+                <video id="custom-video-player" class="custom-rendered-video" controls playsinline>
+                  <source src="" type="video/mp4" id="custom-video-source">
+                </video>
+                <div class="custom-video-meta">
+                  <span class="success-badge">✅ Video Ready!</span>
+                  <a href="#" download="Custom_Avatar_Video.mp4" class="btn btn-small btn-primary" id="custom-download-btn">Download MP4</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Architecture Section -->
+    <section class="tech-section" id="tech-specs">
+      <div class="section-header">
+        <span class="section-tag">AI Specifications</span>
+        <h2 class="section-title">Production Architecture</h2>
+      </div>
+
+      <div class="tech-grid">
+        <div class="tech-card glass-panel">
+          <div class="tech-icon">🎭</div>
+          <h3>D-ID Presenter Clips</h3>
+          <p>Utilizes D-ID v2 presenter clips with full upper-body framing and neural gesture kinematics, rather than static 2D head warps.</p>
+        </div>
+
+        <div class="tech-card glass-panel">
+          <div class="tech-icon">🎙️</div>
+          <h3>Indian Neural Voices</h3>
+          <p>Synthesized with Microsoft Azure Speech Indian neural models (Ananya & Swara) tuned for natural cadence, youthful tone, and Hinglish code-switching.</p>
+        </div>
+
+        <div class="tech-card glass-panel">
+          <div class="tech-icon">✋</div>
+          <h3>Hand Gestures Sync</h3>
+          <p>Presenter gestures (open palms, emphasizing points, natural posture shifts) are synchronized with script pacing for high engagement.</p>
+        </div>
+
+        <div class="tech-card glass-panel">
+          <div class="tech-icon">⚡</div>
+          <h3>Local Zero-Latency Server</h3>
+          <p>Asynchronous Python backend with Range-Request video streaming and direct proxy to D-ID REST API endpoints.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <span class="brand-title">DigiAvtaar<span class="brand-accent">.AI</span></span>
+        <p class="footer-text">AI-Driven Youth Digital Literacy Initiative &bull; Powered by D-ID Video Studio</p>
+      </div>
+
+      <div class="footer-urls">
+        <span class="url-badge">🌐 Local URL: <code id="local-url-text">http://localhost:8080</code></span>
+        <span class="url-badge">📡 LAN URL: <code id="lan-url-text">http://172.16.113.60:8080</code></span>
+      </div>
+
+      <div class="footer-credits">
+        <span>API Key Connected &bull; Indian Teenager Avatar System</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
